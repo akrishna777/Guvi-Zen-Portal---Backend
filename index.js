@@ -20,10 +20,6 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors())
 
-app.use('/', (req, res) => {
-  res.send('Welcome to Guvi Zen Portal API')
-})
-
 app.use('/user', userRouter)
 app.use('/sessions', sessionRouter)
 app.use('/additionalSessions', additionalSessionRouter)
@@ -32,6 +28,10 @@ app.use('/queries', queryRouter)
 app.use('/hackathons', hackathonRouter)
 app.use('/capstone', capstoneRouter)
 app.use('/leaves', leaveRouter)
+
+app.use('/', (req, res) => {
+  res.send('Welcome to Guvi Zen Portal API')
+})
 
 // const CONNECTION_URL =
 //   'mongodb+srv://zenportal:zenportal123@cluster0.die9s.mongodb.net/?retryWrites=true&w=majority'
