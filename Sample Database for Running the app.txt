@@ -1,0 +1,10 @@
+You can use the below mongodb cluster for running the app:
+Just set the the CONNECTION_URL in index.js to this link:
+
+const CONNECTION_URL =
+   'mongodb+srv://zenportal:zenportal123@cluster0.die9s.mongodb.net/?retryWrites=true&w=majority'
+
+
+Sample Accounts:
+Admin account: rohan123@gmail.com    password: rohan123
+Student account: test123@gmail.com    password: test123
